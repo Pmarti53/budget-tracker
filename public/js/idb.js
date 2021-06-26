@@ -16,4 +16,43 @@ request.onsuccess = function (event) {
 
 request.onerror = function (event) {
     console.log(event.targer.errorCode);
-}
+};
+
+function saveBudget(budget) {
+    const transaction = db.transaction(['new_budget_item'], 'readwrite');
+    const budgetObjectStore = transaction.object.Store('new_budget_item');
+    budgetObjectStore.add(budget);
+};
+
+function uploadBudget() {
+    const transaction = db.transaction(['new_budget_item'], 'readwrite');
+    const budgetObjectStore = transaction.object.Store('new_budget_item');
+    const getAll = budgetObjectStore.getAll()
+
+    getAll.onsuccess = function () {
+        if (getAll.result.length > 0) {
+            fetch('/api/pizzas', {
+                method: 'POST',
+                body: JSON.stringify(getAll.result),
+                headers: {
+                    Accept: 'applcation/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(serverResponse => {
+                    if (serverResponse.message) {
+                        throw new Error(serverResponse);
+                    }
+                    const transaction = db.transaction(['new_budget_item'], 'readwrite');
+                    const budgetObjectStore = transaction.objectStore('new_budget_item');
+                    budgetObjectStore.clear();
+
+                    alert('All saved budgets have been submitted!');
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
+    }
+};
