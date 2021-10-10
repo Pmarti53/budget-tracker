@@ -13,7 +13,7 @@ Deployed app can be found here: https://warm-sands-30407.herokuapp.com/
 Follow this link https://github.com/Pmarti53/budget-tracker and clone the code. From the command line, enter <git clone git@github.com:Pmarti53/budget-tracker.git
 
 ## Instructions
-Open Terminal and enter npm run start' on the command line and open the server localhost:3001. App has not yet been deployed to heroku
+Open Terminal and enter npm run start' on the command line and open the server localhost:3001
 
 ## Github
 Pmarti53
