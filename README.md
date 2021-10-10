@@ -11,9 +11,12 @@ Live version can be found here: https://warm-sands-30407.herokuapp.com/
 
 ## Installation
 Follow this link https://github.com/Pmarti53/budget-tracker and clone the code. From the command line, enter <git clone git@github.com:Pmarti53/budget-tracker.git
-
-## Instructions
 Open Terminal and enter npm run start' on the command line and open the server localhost:3001
+
+## Demo
+
+## Technologies Used
+* IndexedDB
 
 ## Github
 Pmarti53
