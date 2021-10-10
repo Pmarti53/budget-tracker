@@ -4,7 +4,7 @@
 ## Description
 This app was created so users can track their budgets and expenses with a simple interface.
 
-Deployed app can be found here: https://warm-sands-30407.herokuapp.com/
+Live version can be found here: https://warm-sands-30407.herokuapp.com/
 
 <img width="999" alt="Screen Shot 2021-07-02 at 1 27 31 PM" src="https://user-images.githubusercontent.com/77707292/124315297-5de77200-db39-11eb-9af7-63d37b10ee3b.png">
 
