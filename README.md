@@ -17,6 +17,8 @@ Open Terminal and enter npm run start' on the command line and open the server l
 
 ## Technologies Used
 * IndexedDB
+* MongoDB
+* React
 
 ## Github
 Pmarti53
